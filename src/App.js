@@ -1,23 +1,25 @@
 import logo from './logo.svg';
 import './App.css';
+import db1 from './datebase';
+import a from './datebase';
+import Row from './Row';
+import Form from './Form';
+import { useState } from 'react';
 
 function App() {
+  const [db, setdb] = useState([]);
+  function passDate(name, amount, store) {
+    console.log(db)
+    setdb([...db, ({ title: name, status: 0, amount: amount, store: store })])
+    console.log(db)
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div>{db.map(a =>
+        <Row item = {a}></Row>
+        )}
+      </div>
+      <Form a ={passDate}></Form>
     </div>
   );
 }
