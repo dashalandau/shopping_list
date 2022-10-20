@@ -9,7 +9,7 @@ function Form(props) {
 		document.getElementById("amount").value = "";
 		document.getElementById("store").value = "";
 	}	
-	return <div>
+	return <div className="form">
         <input id="name" placeholder="name"></input>
         <input id="amount" placeholder="amount"></input>
         <input id="store" placeholder="store"></input>

@@ -11,7 +11,7 @@ function Row(props) {
 			{saleStatus(status)}-
 			{props.item.amount}-
 			{props.item.store}-
-			{!status ? <button onClick={done}>:)</button>:<button onClick={done}>:(</button>}
+			{!status ? <button onClick={done}>⭕</button>:<button onClick={done}>✅</button>}
 		</div>)
 	function done(){
 		if (status) {
