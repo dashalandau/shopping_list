@@ -1,7 +1,4 @@
-import logo from './logo.svg';
 import './App.css';
-import db1 from './datebase';
-import a from './datebase';
 import Row from './Row';
 import Form from './Form';
 import { useState } from 'react';
